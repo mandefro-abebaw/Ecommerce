@@ -1,12 +1,11 @@
 from django.shortcuts import render
-
-# Create your views here.
 from rest_framework import generics, permissions
 from rest_framework.response import Response
 from .models import Order, OrderItem
 from .serializers import OrderSerializer
 from products.models import Product
 from tasks import send_order_email_task  # Celery task
+
 
 class PlaceOrderAPIView(generics.CreateAPIView):
     serializer_class = OrderSerializer
@@ -41,7 +40,7 @@ class PlaceOrderAPIView(generics.CreateAPIView):
         order.total_price = total_price
         order.save()
 
-        # Background task
+        # Celery async email task
         send_order_email_task.delay(order.id)
 
         return Response(OrderSerializer(order).data, status=201)
@@ -63,7 +62,6 @@ class OrderDetailAPIView(generics.RetrieveAPIView):
         return Order.objects.filter(user=self.request.user)
 
 
-# For Admin (optional)
 class AdminUpdateOrderStatusAPIView(generics.UpdateAPIView):
     serializer_class = OrderSerializer
     queryset = Order.objects.all()
