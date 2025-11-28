@@ -1,9 +1,9 @@
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from orders.models import Order
-from .models import Notification
-from .email_services import send_notification_email
-from .sms_service import send_sms_notification
+from apps.orders.models import Order
+from apps.notifications.models import Notification
+from apps.notifications.email_services import send_notification_email
+from apps.notifications.sms_service import send_sms_notification
 
 @receiver(post_save, sender=Order)
 def order_status_notification(sender, instance, created, **kwargs):

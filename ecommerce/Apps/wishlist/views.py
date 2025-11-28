@@ -1,8 +1,8 @@
 from rest_framework import generics, permissions, status
 from rest_framework.response import Response
-from .models import Wishlist, WishlistItem
-from .serializers import WishlistSerializer, AddWishlistItemSerializer
-from products.models import Product
+from apps.wishlist.models import Wishlist, WishlistItem
+from apps.wishlist.serializers import WishlistSerializer, AddWishlistItemSerializer
+from apps.products.models import Product
 
 
 def get_user_wishlist(user):

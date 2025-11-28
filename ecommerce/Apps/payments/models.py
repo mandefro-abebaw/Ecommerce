@@ -1,6 +1,6 @@
 from django.db import models
 from django.conf import settings
-from orders.models import Order
+from apps.orders.models import Order
 
 class Payment(models.Model):
     PAYMENT_STATUS = [

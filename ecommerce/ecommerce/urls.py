@@ -7,7 +7,7 @@ urlpatterns = [
     path('api/products/', include('apps.products.urls')),  
 
     # Add other apps
-    path('api/cart/', include('apps.cart.urls')),           # Cart endpoints
+    path('api/cart/', include('apps.carts.urls')),           # Cart endpoints
     path('api/orders/', include('apps.orders.urls')),       # Orders endpoints
     path('api/shipping/', include('apps.shipping.urls')),   # Shipping endpoints
     path('api/payments/', include('apps.payments.urls')),   # Payments endpoints

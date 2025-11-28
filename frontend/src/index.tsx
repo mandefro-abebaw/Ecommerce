@@ -8,8 +8,8 @@ import App from "./App";
 import LoginPage from "./pages/Auth/LoginPage";
 import HomePage from "./pages/HomePage";
 import RegisterPage from "./pages/Auth/RegisterPage";
-
-
+import ProfileDashboard from "./pages/ProfileDashboard";
+import ProfilePage from "./pages/ProfilePage";
 import reportWebVitals from './reportWebVitals';
 import CartItem from "./components/CartItem";
 
@@ -19,7 +19,8 @@ root.render(
     <Routes>
       {/* Layout wraps all pages that share Navbar & Footer */}
       <Route path="/" element={<Layout />}>
-        <Route index element={<App />} />           {/* "/" home page */}
+        <Route index element={<App />} />    
+        <Route path="profile" element ={<ProfileDashboard />} />       {/* "/" home page */}
         <Route path="login" element={<LoginPage />} />
         <Route path="home" element={<HomePage />} />
         <Route path="register" element={<RegisterPage />} />

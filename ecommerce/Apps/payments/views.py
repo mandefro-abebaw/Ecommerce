@@ -1,9 +1,9 @@
 from rest_framework import generics, permissions, status
 from rest_framework.response import Response
-from .models import Payment
-from .serializers import PaymentSerializer
-from .services import create_payment_intent
-from orders.models import Order
+from apps.payments.models import Payment
+from apps.payments.serializers import PaymentSerializer
+from apps.payments.services import create_payment_intent
+from apps.orders.models import Order
 
 class CreatePaymentAPIView(generics.CreateAPIView):
     serializer_class = PaymentSerializer

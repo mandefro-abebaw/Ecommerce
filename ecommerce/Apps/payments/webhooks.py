@@ -2,7 +2,7 @@ import stripe
 from django.conf import settings
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from payments.models import Payment
+from apps.payments.models import Payment
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 

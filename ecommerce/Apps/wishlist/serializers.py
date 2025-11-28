@@ -1,6 +1,6 @@
 from rest_framework import serializers
-from .models import Wishlist, WishlistItem
-from products.serializers import ProductSerializer
+from apps.wishlist.models import Wishlist, WishlistItem
+from apps.products.serializers import ProductSerializer
 
 
 class WishlistItemSerializer(serializers.ModelSerializer):

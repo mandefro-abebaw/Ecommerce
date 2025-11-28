@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import (
+from apps.wishlist.views import (
     WishlistDetailAPIView,
     AddToWishlistAPIView,
     RemoveWishlistItemAPIView,

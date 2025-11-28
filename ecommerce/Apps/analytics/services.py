@@ -1,5 +1,5 @@
-from orders.models import Order, OrderItem
-from products.models import Product
+from apps.orders.models import Order, OrderItem
+from apps.products.models import Product
 from django.contrib.auth import get_user_model
 from datetime import datetime, timedelta
 

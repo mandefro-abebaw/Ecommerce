@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth import get_user_model
-from products.models import Product  # adjust based on your project structure
-from shipping.models import ShippingAddress
+from apps.products.models import Product  # adjust based on your project structure
+from apps.shipping.models import ShippingAddress
 User = get_user_model()
 
 class Order(models.Model):

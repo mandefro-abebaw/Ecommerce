@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ArrowRight, ShoppingCart, Star, BarChart3 } from "lucide-react";
 
@@ -19,9 +20,11 @@ export default function HomePage() {
             <p className="text-lg text-gray-600 mb-6">
               A fully customizable WooCommerce-style platform. Extensions, analytics, enterprise features — everything in one place.
             </p>
-            <button className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl flex items-center gap-2">
+           <Link to="/login">
+            <button  className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl flex items-center gap-2">
               Get Started <ArrowRight size={18} />
             </button>
+            </Link>
           </motion.div>
 
           <motion.img

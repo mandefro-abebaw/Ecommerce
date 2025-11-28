@@ -1,7 +1,7 @@
 from rest_framework import generics, permissions
 from rest_framework.response import Response
-from .models import Review
-from .serializers import ReviewSerializer
+from apps.reviews.models import Review
+from apps.reviews.serializers import ReviewSerializer
 
 class CreateReviewAPIView(generics.CreateAPIView):
     serializer_class = ReviewSerializer

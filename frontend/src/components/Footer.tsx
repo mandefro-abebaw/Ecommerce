@@ -29,7 +29,7 @@ const Footer = () => {
           <p className="text-sm">Phone: +251 921 57 8636</p>
           {/* ⭐ Social Icons Section */}
           <div className="flex gap-4 mt-4 text-xl">
-            <a href="#" className="hover:text-white"><FaInstagram /></a>
+            <a href="https://www.instagram.com/melorina_1?igsh=MTJ4cGp5ajQ5Y21ybA==" className="hover:text-white"><FaInstagram /></a>
             <a href="#" className="hover:text-white"><FaTelegram /></a>
             <a href="#" className="hover:text-white"><FaFacebook /></a>
             <a href="#" className="hover:text-white"><FaTwitter /></a>

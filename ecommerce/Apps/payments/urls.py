@@ -1,6 +1,6 @@
 from django.urls import path
-from .views import CreatePaymentAPIView, UserPaymentsAPIView
-from .webhooks import stripe_webhook
+from apps.payments.views import CreatePaymentAPIView, UserPaymentsAPIView
+from apps.payments.webhooks import stripe_webhook
 
 urlpatterns = [
     path('create/', CreatePaymentAPIView.as_view(), name='create-payment'),

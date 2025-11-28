@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Cart, CartItem
+from apps.carts.models import Cart, CartItem
 
 class CartItemInline(admin.TabularInline):
     model = CartItem

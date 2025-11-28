@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import (
+from apps.orders.views import (
     PlaceOrderAPIView,
     UserOrdersAPIView,
     OrderDetailAPIView,

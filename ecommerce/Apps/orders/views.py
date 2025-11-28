@@ -1,10 +1,10 @@
 from django.shortcuts import render
 from rest_framework import generics, permissions
 from rest_framework.response import Response
-from .models import Order, OrderItem
-from .serializers import OrderSerializer
-from products.models import Product
-from tasks import send_order_email_task  # Celery task
+from apps.orders.models import Order, OrderItem
+from apps.orders.serializers import OrderSerializer
+from apps.products.models import Product
+from apps.orders.tasks import send_order_email_task  # Celery task
 
 
 class PlaceOrderAPIView(generics.CreateAPIView):

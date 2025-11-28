@@ -18,7 +18,7 @@ const ProductCard = ({ id, name, price, image, rating, slug }: ProductCardProps)
 
   return (
     <div className="border rounded-xl shadow p-4 bg-white hover:shadow-lg transition">
-      <Link to={`/product/${slug}`}>
+      <Link to={`/products/${slug}`}>
         <img
           src={`${BASE_URL}${image}`}
           alt={name}
@@ -27,7 +27,7 @@ const ProductCard = ({ id, name, price, image, rating, slug }: ProductCardProps)
       </Link>
 
       <div className="mt-3">
-        <Link to={`/product/${slug}`} className="text-lg font-semibold line-clamp-2">
+        <Link to={`/products/${slug}`} className="text-lg font-semibold line-clamp-2">
           {name}
         </Link>
 

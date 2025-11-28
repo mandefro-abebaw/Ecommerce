@@ -1,5 +1,5 @@
 from .services import generate_sales_report, generate_product_report, generate_user_report
-from .models import AnalyticsReport
+from apps.analytics.models import AnalyticsReport
 from django.contrib.auth import get_user_model
 
 User = get_user_model()

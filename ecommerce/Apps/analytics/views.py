@@ -3,8 +3,8 @@ from django.shortcuts import render
 # Create your views here.
 from rest_framework import generics, permissions
 from .models import AnalyticsReport
-from .serializers import AnalyticsReportSerializer
-from .reports import create_sales_report, create_product_report, create_user_report
+from apps.analytics.serializers import AnalyticsReportSerializer
+from apps.analytics.reports import create_sales_report, create_product_report, create_user_report
 from rest_framework.response import Response
 
 class AnalyticsReportListAPIView(generics.ListAPIView):

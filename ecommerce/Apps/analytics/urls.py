@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import AnalyticsReportListAPIView, GenerateAnalyticsReportAPIView
+from apps.analytics.views import AnalyticsReportListAPIView, GenerateAnalyticsReportAPIView
 
 urlpatterns = [
     path("reports/", AnalyticsReportListAPIView.as_view(), name="analytics-list"),

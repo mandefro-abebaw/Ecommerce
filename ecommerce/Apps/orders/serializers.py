@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import Order, OrderItem
-from products.serializers import ProductSerializer  # Adjust path
-from shipping.models import ShippingAddress
+from apps.orders.models import Order, OrderItem
+from apps.products.serializers import ProductSerializer  # Adjust path
+from apps.shipping.models import ShippingAddress
 
 class OrderItemSerializer(serializers.ModelSerializer):
     class Meta:

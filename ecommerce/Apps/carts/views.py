@@ -1,8 +1,8 @@
 from rest_framework import generics, permissions, status
 from rest_framework.response import Response
-from .models import Cart, CartItem
-from .serializers import CartSerializer, AddCartItemSerializer
-from products.models import Product
+from apps.carts.models import Cart, CartItem
+from apps.carts.serializers import CartSerializer, AddCartItemSerializer
+from apps.products.models import Product
 
 
 def get_user_cart(user):
