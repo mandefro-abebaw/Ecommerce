@@ -11,7 +11,7 @@ const Navbar = () => {
         
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold text-blue-600">
-          E-Shop
+          MelorinaE-Shop
         </Link>
 
         {/* Desktop Menu */}
@@ -34,7 +34,8 @@ const Navbar = () => {
           </div>
 
           {/* Auth Buttons */}
-          <div className="flex gap-3">
+          
+          <div className="flex gap-3 flex justify-end px-6 py-4">
             <Link
               to="/login"
               className="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-600 hover:text-white transition"
@@ -49,6 +50,7 @@ const Navbar = () => {
               Register
             </Link>
           </div>
+      
 
         </div>
 
@@ -61,7 +63,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {open && (
         <div className="md:hidden bg-white px-6 pb-4 space-y-4 shadow-inner">
-          <Link to="/" className="block">Home</Link>
+          <Link to="/home" className="block">Home</Link>
           <Link to="/products" className="block">Products</Link>
 
           <input
