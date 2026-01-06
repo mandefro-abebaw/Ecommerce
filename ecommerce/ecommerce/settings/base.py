@@ -141,10 +141,10 @@ EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD")
 EMAIL_USE_TLS = os.environ.get("EMAIL_USE_TLS", "True") == "True"
 
 # Gmail API OAuth paths
-GMAIL_TOKEN_JSON = BASE_DIR / os.environ.get("GMAIL_TOKEN_JSON")
-GMAIL_CREDENTIALS_JSON = BASE_DIR / os.environ.get("GMAIL_CREDENTIALS_JSON")
+# GMAIL_TOKEN_JSON = BASE_DIR / os.environ.get("GMAIL_TOKEN_JSON")
+# GMAIL_CREDENTIALS_JSON = BASE_DIR / os.environ.get("GMAIL_CREDENTIALS_JSON")
 
-# Twilio SMS
+# # Twilio SMS
 TWILIO_SID = os.environ.get("TWILIO_SID")
 TWILIO_AUTH_TOKEN = os.environ.get("TWILIO_AUTH_TOKEN")
 TWILIO_PHONE_NUMBER = os.environ.get("TWILIO_PHONE_NUMBER")

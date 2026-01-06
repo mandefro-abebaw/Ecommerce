@@ -12,6 +12,8 @@ import ProfileDashboard from "./pages/ProfileDashboard";
 import ProfilePage from "./pages/ProfilePage";
 import reportWebVitals from './reportWebVitals';
 import CartItem from "./components/CartItem";
+import EditProfile from "./pages/EditProfile";
+
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
@@ -19,8 +21,12 @@ root.render(
     <Routes>
       {/* Layout wraps all pages that share Navbar & Footer */}
       <Route path="/" element={<Layout />}>
-        <Route index element={<App />} />    
-        <Route path="profile" element ={<ProfileDashboard />} />       {/* "/" home page */}
+        <Route index element={<App />} />  
+        <Route path="profile" element={<ProfileDashboard />}>  
+       <Route index element={<ProfilePage />} />             {/* profile overview */}
+        <Route path="edit-profile" element={<EditProfile />} />  {/* nested edit page */}
+        {/* <Route path="change-password" element={<ChangePassword />} /> */}
+        </Route>
         <Route path="login" element={<LoginPage />} />
         <Route path="home" element={<HomePage />} />
         <Route path="register" element={<RegisterPage />} />

@@ -1,4 +1,5 @@
 import axios from "axios";
+import { AArrowUp } from "lucide-react";
 
 const API_URL = "http://127.0.0.1:8000/api/accounts/";
 const PRODUCT_URL = "http://127.0.0.1:8000/api/products/";
@@ -42,6 +43,7 @@ export const logout = () => {
 };
 
 
+
 export const getProfile = async () => {
   const token = localStorage.getItem("access");
 
@@ -59,6 +61,23 @@ export const getProfile = async () => {
 };
 
 
+export const updateProfile = async(data:FormData)=>{
+  const token = localStorage.getItem('access');
+  if (!token){
+    throw new Error("access token have not found");
+  };
+  const response = await axios.patch(`${API_URL}profile/`,data,{
+    headers:{
+      Authorization :'Bearer ${token}',
+      "content-Type": 'multipart/form-data',
+
+    },
+    
+  });
+  return response.data;
+
+
+};
 
 // -------------------- PRODUCTS APP --------------------
 export const getProducts = () =>

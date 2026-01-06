@@ -115,7 +115,7 @@ export default function ProfileDashboard() {
               <Link to="/settings" className="block px-4 py-2 hover:bg-gray-100">
                 Settings
               </Link>
-              <Link to="/edit-profile" className="block px-4 py-2 hover:bg-gray-100">
+              <Link to="/profile/edit-profile" className="block px-4 py-2 hover:bg-gray-100">
                 Edit Profile
               </Link>
               <Link to="/change-password" className="block px-4 py-2 hover:bg-gray-100">

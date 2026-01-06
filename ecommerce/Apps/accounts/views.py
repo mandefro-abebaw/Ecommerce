@@ -36,13 +36,26 @@ class LoginView(generics.GenericAPIView):
         })
 
 
-class ProfileView(generics.RetrieveUpdateAPIView):
-    serializer_class = UserSerializer
+class UserProfileView(APIView):
     permission_classes = [IsAuthenticated]
-    parser_classes = [MultiPartParser, FormParser]
 
-    def get_object(self):
-        return self.request.user
+    def get(self, request):
+        serializer = UserSerializer(request.user)
+        return Response(serializer.data)
+
+    def put(self, request):
+        serializer = UserSerializer(
+            request.user,
+            data=request.data,
+            partial=True
+        )
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data)
+
+    def patch(self, request):
+        return self.put(request)
+
 
 class DeleteAccountView(APIView):
     permission_classes = [IsAuthenticated]
@@ -74,7 +87,10 @@ class ChangePasswordView(APIView):
 
         return Response({'detail': 'Password updated successfully'})
 
-
+def create_profile_for_new_user(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.get_or_create(user=instance)
+        
 class BankInfoView(generics.RetrieveUpdateAPIView):
     serializer_class = BankInfoSerializer
     permission_classes = [IsAuthenticated]
