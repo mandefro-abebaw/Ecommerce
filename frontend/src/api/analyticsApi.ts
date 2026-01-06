@@ -1,5 +1,5 @@
 // src/api/analyticsApi.ts
-import axiosClient from "./axiosClient";
+import axiosClient from "./axiosClients";
 
 export const getAnalyticsReports = () =>
     axiosClient.get("/analytics/reports/");

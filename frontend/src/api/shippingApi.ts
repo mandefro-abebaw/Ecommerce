@@ -1,5 +1,5 @@
 // src/api/shippingApi.ts
-import axiosClient from "./axiosClient";
+import axiosClient from "./axiosClients";
 import { ShippingAddress } from "../types/shipping";
 
 /* ---------- List ---------- */

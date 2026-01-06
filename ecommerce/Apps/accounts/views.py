@@ -87,9 +87,6 @@ class ChangePasswordView(APIView):
 
         return Response({'detail': 'Password updated successfully'})
 
-def create_profile_for_new_user(sender, instance, created, **kwargs):
-    if created:
-        Profile.objects.get_or_create(user=instance)
         
 class BankInfoView(generics.RetrieveUpdateAPIView):
     serializer_class = BankInfoSerializer

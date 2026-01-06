@@ -1,6 +1,7 @@
 // src/api/ordersApi.ts
-import axiosClient from "./axiosClient";
+
 import { Order } from "../types/order";
+import axiosClient from "./axiosClients";
 
 export const placeOrder = (data: any) =>
     axiosClient.post("/orders/place-order/", data);

@@ -1,5 +1,5 @@
 // src/api/notificationsApi.ts
-import axiosClient from "./axiosClient";
+import axiosClient from "./axiosClients";
 
 export const getNotifications = () =>
     axiosClient.get("/notifications/");

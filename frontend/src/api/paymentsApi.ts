@@ -1,5 +1,5 @@
 // src/api/paymentsApi.ts
-import axiosClient from "./axiosClient";
+import axiosClient from "./axiosClients";
 
 export const createPayment = (data: any) =>
     axiosClient.post("/payments/create/", data);

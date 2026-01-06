@@ -1,5 +1,5 @@
 // src/api/reviewsApi.ts
-import axiosClient from "./axiosClient";
+import axiosClient from "./axiosClients";
 
 export const createReview = (data: any) =>
     axiosClient.post("/reviews/create/", data);

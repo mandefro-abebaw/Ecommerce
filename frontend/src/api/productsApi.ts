@@ -1,5 +1,5 @@
 // src/api/productsApi.ts
-import axiosClient from "./axiosClient";
+import axiosClient from "./axiosClients";
 import { Product } from "../types/product";
 
 export const getProducts = () =>

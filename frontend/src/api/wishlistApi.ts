@@ -1,5 +1,5 @@
 // src/api/wishlistApi.ts
-import axiosClient from "./axiosClient";
+import axiosClient from "./axiosClients";
 
 export const getWishlist = () =>
     axiosClient.get("/wishlist/");

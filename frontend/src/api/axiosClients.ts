@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-    baseURL: import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000/api/",
+    baseURL:  process.env.REACT_APP_API_BASE_URL,
     withCredentials: true, // required for cookies / CSRF
     headers: {
         "Content-Type": "application/json",

@@ -1,6 +1,7 @@
 // src/api/cartApi.ts
-import axiosClient from "./axiosClient";
-import { Cart } from "../types/cart";
+import axiosClient from "./axiosClients";
+
+import {Cart} from "../types/cart"
 
 export const getCart = () =>
     axiosClient.get<Cart>("/carts/");

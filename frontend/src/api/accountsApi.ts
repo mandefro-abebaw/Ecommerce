@@ -1,5 +1,6 @@
 // src/api/accountsApi.ts
-import axiosClient from "./axiosClient";
+// import {axiosClient} from "./axiosClient";
+import axiosClient from "./axiosClients";
 import { User } from "../types/user";
 
 /* ---------- Auth ---------- */
