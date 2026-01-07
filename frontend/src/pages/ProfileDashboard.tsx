@@ -205,7 +205,7 @@ export default function ProfileDashboard() {
 
         <nav className="space-y-3">
           <Link
-            to=""
+            to="profile"
             className="block px-4 py-2 rounded-lg hover:bg-gray-100"
           >
             Overview

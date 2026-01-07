@@ -12,7 +12,7 @@ const axiosClient = axios.create({
 // Request Interceptor (Attach token)
 axiosClient.interceptors.request.use(
     (config) => {
-        const token = localStorage.getItem("access_token");
+        const token = localStorage.getItem("access");
         if (token && config.headers) {
             config.headers.Authorization = `Bearer ${token}`;
         }
@@ -26,8 +26,8 @@ axiosClient.interceptors.response.use(
     (response) => response,
     (error) => {
         if (error.response?.status === 401) {
-            localStorage.removeItem("access_token");
-            localStorage.removeItem("refresh_token");
+            localStorage.removeItem("access");
+            localStorage.removeItem("refresh");
             window.location.href = "/login";
         }
         return Promise.reject(error);

@@ -20,12 +20,12 @@ const Footer = () => {
           <p className="text-sm">Phone: +251 921 57 8636</p>
           <div className="flex gap-2 mt-4 text-xl">
             <a href="https://www.instagram.com/melorina_1?igsh=MTJ4cGp5ajQ5Y21ybA==" className="hover:text-white"><FaInstagram /></a>
-            <a href="#" className="hover:text-white"><FaTelegram /></a>
-            <a href="#" className="hover:text-white"><FaFacebook /></a>
-            <a href="#" className="hover:text-white"><FaTwitter /></a>
+            <a href="https://t.me/Siparia" className="hover:text-white"><FaTelegram /></a>
+            <a href="https://www.facebook.com/mandefroabebaw" className="hover:text-white"><FaFacebook /></a>
+            <a href="https://x.com/manirmas6532new" className="hover:text-white"><FaTwitter /></a>
             <a href="#" className="hover:text-white"><FaLinkedin /></a>
-            <a href="#" className="hover:text-white"><FaPinterest /></a>
-            <a href="#" className="hover:text-white"><FaYoutube /></a>
+            <a href="https://www.pinterest.com/mandefroabebaw" className="hover:text-white"><FaPinterest /></a>
+            <a href="https://www.youtube.com/mandefro-q3q" className="hover:text-white"><FaYoutube /></a>
           </div>
         </div>
 

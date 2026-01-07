@@ -1,6 +1,6 @@
 
 import { useEffect, useState } from "react";
-import { getProfile, updateProfile } from "../services/AuthService";
+import { getProfile,updateProfile }from "../api/accountsApi";
 
 const BASE_URL = "http://127.0.0.1:8000";
 
@@ -28,11 +28,11 @@ export default function EditProfile() {
 useEffect(()=>{
   getProfile()
   .then((res)=>{
-    setData(res);
-    setForm({first_name:res.first_name,
-      last_name:res.last_name,
-      phone:res.profile.phone,
-      addres:res.profile.address,
+    setData(res.data);
+    setForm({first_name:res.data.first_name,
+      last_name:res.data.last_name,
+      phone:res.data.profile.phone,
+      addres:res.data.profile.address,
     });
 
   })

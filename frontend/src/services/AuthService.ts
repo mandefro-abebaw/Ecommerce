@@ -1,5 +1,4 @@
 import axios from "axios";
-import { AArrowUp } from "lucide-react";
 
 const API_URL = "http://127.0.0.1:8000/api/accounts/";
 const PRODUCT_URL = "http://127.0.0.1:8000/api/products/";
@@ -68,7 +67,8 @@ export const updateProfile = async(data:FormData)=>{
   };
   const response = await axios.patch(`${API_URL}profile/`,data,{
     headers:{
-      Authorization :'Bearer ${token}',
+      Authorization: `Bearer ${token}`,
+      
       "content-Type": 'multipart/form-data',
 
     },
