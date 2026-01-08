@@ -35,8 +35,8 @@ export const login = async (data: LoginPayload) => {
 export const getProfile = () =>
     axiosClient.get<User>("/accounts/profile/");
 
-export const updateProfile = (data: Partial<User>) =>
-    axiosClient.put("/accounts/profile/", data);
+export const updateProfile = (data: FormData) =>
+    axiosClient.put<User>("/accounts/profile/", data);
 
 /* ---------- Password ---------- */
 

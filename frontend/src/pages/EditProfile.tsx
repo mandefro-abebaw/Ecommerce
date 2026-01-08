@@ -68,7 +68,7 @@ useEffect(()=>{
       }
 
       const updated = await updateProfile(formData);
-      setData(updated);
+      setData(updated.data);
       setEditMode(false);
     } catch {
       setError("Failed to update profile");
